@@ -1,64 +1,22 @@
 <template>
-  <button
-    @click="toggleAccordion()"
-    class="text-gray-800 dark:text-gray-500 transition-all bg-transparent border dark:border-gray-700 dark:hover:bg-gray-700 hover:bg-gray-200 w-full flex text-left rounded-md box-border p-3"
-    :aria-expanded="isOpen"
-    :aria-controls="`collapse${uid}`"
-    :class="{
-      'bg-gray-200 dark:bg-gray-700': isOpen,
-      'bg-transparent': !isOpen,
-    }"
-  >
-    <!-- icon accordion -->
-    <span class="mr-3 text-xl">
-      <slot name="icon"></slot>
-    </span>
-    <!-- title accordion -->
-    <span class="w-full">
-      <slot name="title" />
-    </span>
-    <span
-      class="box-border mt-1 text-gray-500 dark:text-gray-600"
-      :class="{
-        'rotate-180': isOpen,
-        'rotate-0': !isOpen,
-      }"
-    >
-      <span class="float-right">
-        <Icon icon="fa6-solid:angle-down" />
-      </span>
-    </span>
-  </button>
-
-  <div
-    v-show="isOpen"
-    :id="uid"
-    class="p-3 mt-2 bg-gray-100 dark:bg-gray-700"
-  >
-    <slot name="content" />
+  <!-- Banner de explicação com imagem -->
+<div class="mt-6 bg-gray-100 dark:bg-gray-700 rounded-md overflow-hidden shadow-md">
+  <img
+    src="../assets/img/teste.jpeg"
+    alt="Segunda etapa de autenticação"
+    class="w-full h-64 object-cover"
+  />
+  <div class="p-5">
+    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Segunda Etapa de Autenticação</h3>
+    <p class="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+      Após inserir seu e-mail e senha, você será redirecionado para uma segunda tela onde será realizada uma autenticação adicional. 
+      Essa etapa garante mais segurança ao seu acesso e confirma que tudo está em conformidade antes de liberar o uso completo do sistema.
+    </p>
   </div>
+</div>
+
 </template>
 
 <script>
-  import { Icon } from "@iconify/vue";
-  let _uid = 0;
 
-  export default {
-    data() {
-      _uid += 1;
-      return {
-        isOpen: false,
-        uid: `collapse${_uid}`,
-      };
-    },
-
-    methods: {
-      toggleAccordion() {
-        this.isOpen = !this.isOpen;
-      },
-    },
-    components: {
-      Icon,
-    },
-  };
 </script>

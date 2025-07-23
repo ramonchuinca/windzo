@@ -1,100 +1,36 @@
 <template>
-  <transition
-    name="fade"
-    mode="out-in"
-  >
-    <div
-      v-if="!close"
-      :id="_id"
-      :aria-close="!close"
-      :aria-controls="`${_id}`"
-      class="flex justify-between py-3 px-5 w-full box-border rounded-md"
-    >
-      <div class="flex">
-        <span class="text-2xl mr-3">
-          <slot name="icon"></slot>
-        </span>
-        <div>
-          <h2 class="text-xl font-bold">
-            <slot name="heading"></slot>
-          </h2>
-          <p>
-            <slot name="content"></slot>
-          </p>
-        </div>
-      </div>
-      <button
-        v-if="actionClose"
-        class="text-2xl"
-        @click="closeAlert"
-      >
-        <Icon icon="la:times" />
-      </button>
-    </div>
-  </transition>
-</template>
-<style>
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.2s ease;
-  }
+  <div class="max-w-4xl mx-auto p-6 text-center">
+    <h1 class="text-3xl font-semibold mb-6">Bem-vindo à Tela de Login</h1>
 
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
-</style>
+    <img 
+      src="../assets/img/teste.jpeg" 
+      alt="Ilustração do Login" 
+      class="w-full h-auto rounded-lg shadow-md mb-8 object-cover"
+    />
+
+    <p class="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+  Para acessar o sistema, informe seu <strong>e-mail</strong> e <strong>senha</strong> cadastrados. 
+  Esta tela foi criada para ser simples, segura e fácil de usar, garantindo uma experiência tranquila para todos os usuários.
+  Após o login, você será direcionado para uma <strong>segunda etapa de autenticação</strong>, onde confirmaremos que está tudo certo com suas informações antes de liberar o acesso completo ao sistema.
+</p>
+
+    <router-link
+      to="/component/accordion"
+      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-8 rounded-full transition duration-300"
+      title="Ir para a próxima etapa"
+    >
+      Próximo ➤
+    </router-link>
+  </div>
+</template>
+
+
+
 <script>
-  import { Icon } from "@iconify/vue";
-  let _alertid = 0;
-  export default {
-    props: {
-      background: {
-        type: String,
-        default: "",
-      },
-      demo: {
-        type: Boolean,
-        default: false,
-      },
-      border: {
-        type: Boolean,
-        default: false,
-      },
-      borderColor: {
-        type: String,
-      },
-      textColor: {
-        type: String,
-      },
-      actionClose: {
-        type: Boolean,
-        default: false,
-      },
-    },
-    data() {
-      _alertid += 1;
-      return {
-        close: false,
-        _id: `alert-id-${_alertid}`,
-      };
-    },
-    components: {
-      Icon,
-    },
-    methods: {
-      demoAlert() {
-        setTimeout(() => {
-          this.close = false;
-        }, 2000);
-      },
-      closeAlert() {
-        this.close = true;
-        if (this.demo == true) {
-          this.demoAlert();
-        }
-      },
-    },
-    mounted() {},
-  };
+
+
 </script>
+
+<style scoped>
+/* Personalize como quiser */
+</style>

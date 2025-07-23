@@ -32,73 +32,57 @@
       class="wrapper-card grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-2 mt-5"
     >
       <!-- card  -->
-      <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
-      >
-        <div class="p-2 max-w-sm">
-          <div
-            class="bg-orange-200 rounded-full w-14 h-14 text-lg p-3 text-orange-600 mx-auto"
-          >
-            <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="30px"
-                height="30px"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M10 16V8a2 2 0 0 1 2-2h9V5c0-1.1-.9-2-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-1h-9a2 2 0 0 1-2-2zm3-8c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h9V8h-9zm3 5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
+   <div
 
-        <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
-            Rp.23.423.009
-          </p>
-          <h2 class="font-normal text-gray-400 text-md mt-1">Total Payouts</h2>
-        </div>
-      </div>
+  class="card bg-white dark:bg-gray-800 rounded-md p-5 border dark:border-gray-700 flex w-full max-w-3xl"
+>
+  <div class="flex-1 p-0">
+    <img
+      src="../assets/img/teste-1.jpeg"
+      alt="Descrição da imagem"
+      class="mb-4 w-full h-auto object-contain rounded"
+    />
+    
+    <div class="p-2 max-w-sm text-white flex items-center gap-2">
+      <router-link
+        to="/component/alert"
+        class="text-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-black dark:text-white rounded-full p-2 transition"
+        title="Ir para Alert.vue"
+      >
+        ➤
+      </router-link>
+      Tela de Login
+    </div>
+  </div>
+</div>
+
+
+
       <!-- end card -->
-      <div
-        class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
-      >
-        <div class="p-2 max-w-sm">
-          <div
-            class="bg-green-200 rounded-full w-14 h-14 text-lg p-3 text-green-600 mx-auto"
-          >
-            <span class="">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-                role="img"
-                width="30px"
-                height="30px"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  d="M5 22h14a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.777c0-2.609-1.903-4.945-4.5-5.198A5.005 5.005 0 0 0 7 7v1H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2zm12-12v2h-2v-2h2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-2 3h2v2H7v-2z"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
+       <div
 
-        <div class="block p-2 w-full">
-          <p class="font-semibold text-gray-900 dark:text-gray-200 text-xl">
-            256
-          </p>
-          <h2 class="font-normal text-gray-400 text-md mt-1">Total Sales</h2>
-        </div>
-      </div>
+  class="card bg-white dark:bg-gray-800 rounded-md p-5 border dark:border-gray-700 flex w-full max-w-3xl"
+>
+  <div class="flex-1 p-0">
+    <img
+      src="../assets/img/dentroapp.jpeg"
+      alt="Descrição da imagem"
+      class="mb-4 w-full h-auto object-contain rounded"
+    />
+    
+    <div class="p-2 max-w-sm text-white flex items-center gap-2">
+      <router-link
+        to="/component/accordion"
+        class="text-sm bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-black dark:text-white rounded-full p-2 transition"
+        title="Ir para Alert.vue"
+      >
+        ➤
+      </router-link>
+      App Interno
+    </div>
+  </div>
+</div>
+     
       <!-- end card -->
       <div
         class="card bg-white dark:bg-gray-800 w-full rounded-md p-5 border dark:border-gray-700 flex"
