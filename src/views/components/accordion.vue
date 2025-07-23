@@ -3,6 +3,7 @@
     <h1 class="text-3xl font-semibold mb-6 text-white">Segunda Etapa de Autenticação</h1>
 
 
+    
     <img 
       :src="bannerImage" 
       alt="Ilustração da Segunda Etapa" 
